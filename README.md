@@ -15,7 +15,7 @@ Your project now has the following files:
 - `compare_agents.py` - Test and compare agent performance
 - `train_longer.py` - Extended training (100k more timesteps)
 - `monte_carlo_decisions.py` - Decision-making under uncertainty
-- `integrated_game.py` - **Full integration: RL + Monte Carlo**
+- `integrated_game_v2.py` - **Full integration: RL + Monte Carlo**
 - `README.md` - This file!
 
 ## 🚀 Quick Start - What to Run Now
@@ -43,7 +43,7 @@ This runs 20 test episodes and shows:
 
 ### Step 3: Run the Integrated Game (RL + Monte Carlo)
 ```bash
-python integrated_game.py
+python integrated_game_v2.py
 ```
 Watch the agent make strategic decisions every 20 steps:
 - **Red ring**: Aggressive strategy
@@ -137,13 +137,13 @@ model.learn(total_timesteps=200000)  # Train longer
 ```
 
 ### Modify Decision Interval
-In `integrated_game.py`:
+In `integrated_game_v2.py`:
 ```python
 self.decision_interval = 10  # Make decisions more frequently
 ```
 
 ### Change Strategy Parameters
-In `integrated_game.py` -> `choose_strategy()`:
+In `integrated_game_v2.py` -> `choose_strategy()`:
 ```python
 Decision(
     name="Very Aggressive",
@@ -176,7 +176,7 @@ pip install gymnasium stable-baselines3 pygame numpy torch matplotlib
 - Adjust reward structure in `rl_environment.py`
 - Increase grid size for more exploration space
 
-### Visualization Too Fast/Slow
+### Visualisation Too Fast/Slow
 In `visualize_agent.py` or `integrated_game.py`:
 ```python
 FPS = 10  # Change from 5 to 10 (faster) or 3 (slower)
@@ -224,7 +224,7 @@ You have:
 2. **Test Often**: Use `compare_agents.py` after any changes
 3. **Save Models**: Always save before experimenting with new parameters
 4. **Track Progress**: Keep notes on what parameter changes improve performance
-5. **Visualize Decisions**: The integrated game shows strategic thinking in real-time
+5. **Visualise Decisions**: The integrated game shows strategic thinking in real-time
 
 ## 🤝 Next Session Planning
 
@@ -261,7 +261,7 @@ You've successfully integrated:
 - Reinforcement Learning
 - Monte Carlo Simulation
 - Decision-making under uncertainty
-- Real-time visualization
+- Real-time visualisation
 
 This is a solid foundation for exploring AI agents, uncertainty, and strategic decision-making.
 
